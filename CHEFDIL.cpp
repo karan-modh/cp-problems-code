@@ -32,29 +32,26 @@ int main(){
 			else{
 				face_sum += 1;
 				face[i] = 2;
-				switch(i){
-					case 0:
-				}
-				// if(i>0 && i<N-1){
+				if(i>0 && i<N-1){
 					
-				// 	if(face[i-1]==2){}
-				// 	else if(face[i-1] == 0){face[i-1] = 1;face_sum+=1;}
-				// 	else{face[i-1] = 0;face_sum -= 1;}
+					if(face[i-1]==2){}
+					else if(face[i-1] == 0){face[i-1] = 1;face_sum+=1;}
+					else{face[i-1] = 0;face_sum -= 1;}
 
-				// 	if(face[i+1]==2){}
-				// 	else if(face[i+1] == 0){face[i+1] = 1;face_sum+=1;}
-				// 	else{face[i+1] = 0;face_sum -= 1;}
-				// }
-				// else if(i==0){
-				// 	if(face[i+1]==2){}
-				// 	else if(face[i+1] == 0){face[i+1] = 1;face_sum+=1;}
-				// 	else{face[i+1] = 0;face_sum -= 1;}
-				// }
-				// else{
-				// 	if(face[i-1]==2){}
-				// 	else if(face[i-1] == 0){face[i-1] = 1;face_sum+=1;}
-				// 	else{face[i-1] = 0;face_sum -= 1;}
-				// }
+					if(face[i+1]==2){}
+					else if(face[i+1] == 0){face[i+1] = 1;face_sum+=1;}
+					else{face[i+1] = 0;face_sum -= 1;}
+				}
+				else if(i==0){
+					if(face[i+1]==2){}
+					else if(face[i+1] == 0){face[i+1] = 1;face_sum+=1;}
+					else{face[i+1] = 0;face_sum -= 1;}
+				}
+				else{
+					if(face[i-1]==2){}
+					else if(face[i-1] == 0){face[i-1] = 1;face_sum+=1;}
+					else{face[i-1] = 0;face_sum -= 1;}
+				}
 			}
 		}
 		if(face_sum == 2*N){cout << "WIN" << endl;}
