@@ -23,6 +23,18 @@
 
 using namespace std;
 
+typedef template<T>
+void printVector(vector<T> &v){
+	int n = v.size();
+	for0(i,n){ cout<<v[i]<< " "; }
+	cout << endl;
+}
+
+typedef template<T>
+void inpVector(vector<T> &v, int n){
+	for0(i,n){cin>>v[i];}
+}
+
 int main(){
 
 	int T;
